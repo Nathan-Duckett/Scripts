@@ -19,7 +19,7 @@ fi
 mkdir $TARGET_PREFIX
 
 # Loop every zip file in the prefix
-for takeout_folder in $PATH_PREFIX/*.zip; do
+for takeout_folder in "$PATH_PREFIX"/*.zip; do
     # Extract the name without .zip at the end
     name=${takeout_folder%.zip}
     # Extract the name with any path prefixes in front removed
