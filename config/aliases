@@ -1,0 +1,19 @@
+DIR=$(cd `dirname $0` && pwd)
+
+alias setv=". $DIR/../setv.sh"
+
+# Tmux aliases
+alias t-n='tmux new -s'
+alias t-a='tmux a -t'
+alias t-k='tmux kill-session -t'
+alias t-l='tmux ls'
+alias t-c='tmux detach'
+
+# Git aliases
+function gcamp () {
+        gcam "$1" && gp
+}
+
+function gps () {
+        gp --set-upstream $1
+}
